@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>FoodVerse</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+<div class="logo">
+🍔 FoodVerse
+</div>
+
+<ul class="nav-links">
+
+<li>Home</li>
+
+<li>Menu</li>
+
+<li>Orders</li>
+
+<li>About</li>
+
+</ul>
+
+<div class="nav-right">
+
+<input id="searchInput" placeholder="Search food...">
+
+<button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<!-- NAVBAR -->
+
+
+
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero-ultimate">
+
+  <div class="hero-left">
+    <h1>🔥 Today's Daily Deals</h1>
+
+    <div class="deal-cards">
+
+      <div class="deal-card">
+        <h3>Pizza</h3>
+        <p>20% OFF</p>
+      </div>
+
+      <div class="deal-card">
+        <h3>Burger Combo</h3>
+        <p>₹199</p>
+      </div>
+
+      <div class="deal-card">
+        <h3>Cold Coffee</h3>
+        <p>Buy 1 Get 1</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-right">
+
+    <h2>🤔 What Should I Eat Today?</h2>
+    <p>Feeling hungry? Let us surprise you.</p>
+
+    <button onclick="suggestFood()">Suggest Food</button>
+
+    <div id="suggestedFood" class="suggested-food"></div>
+
+  </div>
+
+</section>
+
+<div class="filters">
+
+<button onclick="filterCategory('all')">All</button>
+
+<button onclick="filterCategory('pizza')">Pizza</button>
+
+<button onclick="filterCategory('burger')">Burger</button>
+
+<button onclick="filterCategory('sandwich')">Sandwich</button>
+
+<button onclick="filterCategory('drink')">Drinks</button>
+
+<button onclick="filterCategory('healthy')">Healthy</button>
+
+</div>
+<!-- RECOMMENDED -->
+
+<section class="section">
+
+<h3>Recommended</h3>
+
+<div class="cards" id="foodCards">
+
+</div>
+
+</section>
+
+
+<!-- POPULAR -->
+
+<section class="section">
+
+<h3>Popular</h3>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<h4>Healthy Salad</h4>
+<p>350 kcal • 15 min</p>
+<button onclick="addToCartManual('Healthy Salad',350)">
+Add to Cart
+</button>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061">
+<h4>Avocado Toast</h4>
+<p>220 kcal • 10 min</p>
+<button onclick="addToCartManual('Avocado',250)">
+Add to Cart
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<h4>Grilled Chicken</h4>
+<p>420 kcal • 20 min</p>
+<button onclick="addToCartManual('Grilled Chicken',550)">
+Add to Cart
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+<h4>Cheese Four Pizza</h4>
+<p>480 kcal • 20 min</p>
+<button onclick="addToCartManual('Cheese Four Pizza',280)">
+Add to Cart
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af">
+<h4>Cheese Burst Sandwich</h4>
+<p>320 kcal • 12 min</p>
+<button onclick="addToCartManual('Cheese Burst Sandwich',125)">
+Add to Cart
+</button>
+</div>
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<div class="cart-drawer" id="cartDrawer">
+
+<h3>Your Cart 🛒</h3>
+
+<ul id="cartItems"></ul>
+
+<h4>Total: ₹<span id="cartTotal">0</span></h4>
+
+<button onclick="goToCheckout()">Checkout</button>
+
+</div>
+
+<div class="floating-cart" onclick="toggleCart()">
+🛒 <span id="cartCount">0</span>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
